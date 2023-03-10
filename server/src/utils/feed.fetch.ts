@@ -1,12 +1,12 @@
 import Parser from 'rss-parser';
 import moment from 'moment';
 import mongoose from 'mongoose';
-import config from "../config/config";
-import {IFeed, IFeedDoc, STATUS} from "../models/feed/feed.interfaces";
-import {IStory} from "../models/story/story.interfaces";
-import logger from "../config/logger";
-import {storyService, feedService} from "../services";
-import {QueryResult} from "../models/plugins/paginate";
+import config from '../config/config';
+import { IFeed, IFeedDoc, STATUS } from '../models/feed/feed.interfaces';
+import { IStory } from '../models/story/story.interfaces';
+import logger from '../config/logger';
+import { storyService, feedService } from '../services';
+import { QueryResult } from '../models/plugins/paginate';
 
 const parser = new Parser({
   customFields: {
@@ -41,7 +41,7 @@ const addStory = async (rawStory: any, feed: IFeed) => {
   } catch (err: any) {
     if (err.code !== 11000) {
       logger.error(err);
-      return false
+      return false;
     }
   }
   return false;
