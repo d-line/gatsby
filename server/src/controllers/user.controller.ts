@@ -7,3 +7,4 @@ export const exists = catchAsync(async (_req: Request, res: Response) => {
   res.send(result);
 });
 
+export default exists;

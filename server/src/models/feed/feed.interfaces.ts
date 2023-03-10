@@ -1,6 +1,5 @@
 import mongoose, { Model, Document } from 'mongoose';
-import {QueryResult} from "../plugins/paginate";
-
+import { QueryResult } from '../plugins/paginate';
 
 export interface IMaybeFeed {
   url: string;

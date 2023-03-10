@@ -1,5 +1,5 @@
-import {IStory, IStoryDoc} from "../models/story/story.interfaces";
-import {IOptions, QueryResult} from "../models/plugins/paginate";
+import { IStory, IStoryDoc } from '../models/story/story.interfaces';
+import { IOptions, QueryResult } from '../models/plugins/paginate';
 import Story from '../models/story/story.model';
 /**
  * Create a feed
@@ -20,4 +20,3 @@ export const queryStories = async (filter: Record<string, any>, options: IOption
   const feeds = await Story.paginate(filter, options);
   return feeds;
 };
-

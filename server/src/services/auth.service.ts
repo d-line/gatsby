@@ -1,9 +1,9 @@
 import httpStatus from 'http-status';
-import {userService} from "./";
-import {IUserDoc} from '../models/user/user.interfaces';
+import * as userService from './user.service';
+import { IUserDoc } from '../models/user/user.interfaces';
 import Token from '../models/token/token.model';
-import ApiError from "../utils/ApiError";
-import tokenTypes from "../models/token/token.types";
+import ApiError from '../utils/ApiError';
+import tokenTypes from '../models/token/token.types';
 
 /**
  * Login with password
@@ -25,7 +25,7 @@ export const loginUserWithPassword = async (password: string): Promise<IUserDoc>
  * @returns {Promise<void>}
  */
 export const logout = async (refreshToken: string): Promise<void> => {
-  const refreshTokenDoc = await Token.findOne({token: refreshToken, type: tokenTypes.REFRESH, blacklisted: false});
+  const refreshTokenDoc = await Token.findOne({ token: refreshToken, type: tokenTypes.REFRESH, blacklisted: false });
   if (!refreshTokenDoc) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Not found');
   }

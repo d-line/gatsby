@@ -1,6 +1,6 @@
 import Joi from 'joi';
-import {objectId} from "./custom.validation";
-import {IFeed, IMaybeFeed} from "../models/feed/feed.interfaces";
+import { objectId } from './custom.validation';
+import { IFeed, IMaybeFeed } from '../models/feed/feed.interfaces';
 
 const createMaybeFeedBody: Record<keyof IMaybeFeed, any> = {
   url: Joi.string().required().uri(),

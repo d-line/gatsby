@@ -1,6 +1,6 @@
 import Joi from 'joi';
-import { password } from '../validations/custom.validation';
-import {IUser} from "../models/user/user.interfaces";
+import { password } from './custom.validation';
+import { IUser } from '../models/user/user.interfaces';
 
 const registerBody: Record<keyof IUser, any> = {
   password: Joi.string().required().custom(password),

@@ -1,7 +1,6 @@
 import { Model, Document } from 'mongoose';
 import { IFeed } from '../feed/feed.interfaces';
-import {QueryResult} from "../plugins/paginate";
-
+import { QueryResult } from '../plugins/paginate';
 
 export interface IStory {
   title: string;

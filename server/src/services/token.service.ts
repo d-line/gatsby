@@ -4,8 +4,8 @@ import mongoose from 'mongoose';
 import Token from '../models/token/token.model';
 import tokenTypes from '../models/token/token.types';
 import { AccessAndRefreshTokens, ITokenDoc } from '../models/token/token.interfaces';
-import config from "../config/config";
-import {IUserDoc} from "../models/user/user.interfaces";
+import config from '../config/config';
+import { IUserDoc } from '../models/user/user.interfaces';
 
 /**
  * Generate token

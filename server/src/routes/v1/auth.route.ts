@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import validate from "../../middleware/validate";
+import validate from '../../middleware/validate';
 import { authValidation } from '../../validations';
 import { authController } from '../../controllers';
 

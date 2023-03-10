@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import catchAsync from '../utils/catchAsync';
 import pick from '../utils/pick';
-import {IOptions} from "../models/plugins/paginate";
-import {storyService} from "../services";
+import { IOptions } from '../models/plugins/paginate';
+import { storyService } from '../services';
 
 export const createStory = catchAsync(async () => {});
 

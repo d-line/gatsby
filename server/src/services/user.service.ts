@@ -1,19 +1,19 @@
+import httpStatus from 'http-status';
 import User from '../models/user/user.model';
-import {IUser, IUserDoc} from "../models/user/user.interfaces";
-import ApiError from "../utils/ApiError";
-import httpStatus from "http-status";
+import { IUser, IUserDoc } from '../models/user/user.interfaces';
+import ApiError from '../utils/ApiError';
 
 /**
  * Query for users
  * @returns {Promise<boolean>}
  */
-export const exists = async (): Promise<boolean> => await User.doesExist();
+export const exists = async (): Promise<boolean> => User.doesExist();
 
 /**
  * Get User
  * @returns {Promise<QueryResult>}
  */
-export const getUser = async (): Promise<IUserDoc | null> => await User.findOne();
+export const getUser = async (): Promise<IUserDoc | null> => User.findOne();
 
 /**
  * Register a user

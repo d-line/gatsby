@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { IFeedDoc, IFeedModel } from './feed.interfaces';
-import {paginate, toJSON} from "../plugins";
+import { paginate, toJSON } from '../plugins';
 
 const feedSchema = new mongoose.Schema<IFeedDoc, IFeedModel>(
   {

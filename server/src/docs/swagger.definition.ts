@@ -1,4 +1,4 @@
-import config from "../config/config";
+import config from '../config/config';
 
 const swaggerDefinition = {
   openapi: '3.0.0',
@@ -8,7 +8,7 @@ const swaggerDefinition = {
     description: 'Anti-Social RSS Reader',
     license: {
       name: 'MIT',
-      url: 'https://github.com/d-line/toro.git',
+      url: 'https://github.com/d-line/gatsby.git',
     },
   },
   servers: [

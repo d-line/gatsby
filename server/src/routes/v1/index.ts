@@ -3,8 +3,8 @@ import authRoute from './auth.route';
 import docsRoute from './swagger.route';
 import userRoute from './user.route';
 import config from '../../config/config';
-import feedRoute from "./feed.route";
-import storyRoute from "./story.route";
+import feedRoute from './feed.route';
+import storyRoute from './story.route';
 
 const router = express.Router();
 
