@@ -1,8 +1,8 @@
 import express, { Router } from 'express';
-import auth from "../../middleware/auth";
-import validate from "../../middleware/validate";
-import {storyValidation} from "../../validations";
-import {storyController} from "../../controllers";
+import auth from '../../middleware/auth';
+import validate from '../../middleware/validate';
+import { storyValidation } from '../../validations';
+import { storyController } from '../../controllers';
 
 const router: Router = express.Router();
 

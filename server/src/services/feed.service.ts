@@ -3,10 +3,10 @@ import mongoose from 'mongoose';
 import { NextFunction } from 'express';
 import Parser from 'rss-parser';
 import rssFinder from 'rss-finder';
-import ApiError from "../utils/ApiError";
-import Feed from "../models/feed/feed.model";
-import {IFeed, IFeedDoc, UpdateFeedBody} from "../models/feed/feed.interfaces";
-import {IOptions, QueryResult} from "../models/plugins/paginate";
+import ApiError from '../utils/ApiError';
+import Feed from '../models/feed/feed.model';
+import { IFeed, IFeedDoc, UpdateFeedBody } from '../models/feed/feed.interfaces';
+import { IOptions, QueryResult } from '../models/plugins/paginate';
 
 // import { NewCreatedUser, UpdateUserBody, IUserDoc, NewRegisteredUser } from './user.interfaces';
 

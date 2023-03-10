@@ -1,9 +1,10 @@
 import express, { Router } from 'express';
 import { feedValidation } from '../../validations';
-import auth from "../../middleware/auth";
-import validate from "../../middleware/validate";
-import {feedController} from "../../controllers";
-import discoverFeed from "../../middleware/feed.discover";
+import auth from '../../middleware/auth';
+import validate from '../../middleware/validate';
+import { feedController } from '../../controllers';
+import discoverFeed from '../../middleware/feed.discover';
+
 const router: Router = express.Router();
 
 router

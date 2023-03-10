@@ -3,9 +3,9 @@ import { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import catchAsync from '../utils/catchAsync';
 import pick from '../utils/pick';
-import ApiError from "../utils/ApiError";
-import {feedService} from "../services";
-import {IOptions} from "../models/plugins/paginate";
+import ApiError from '../utils/ApiError';
+import { feedService } from '../services';
+import { IOptions } from '../models/plugins/paginate';
 
 export const createFeed = catchAsync(async (req: Request, res: Response) => {
   const feed = await feedService.createFeed(req.body);

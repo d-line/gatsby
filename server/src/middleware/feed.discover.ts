@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import moment from 'moment';
-import {feedService} from "../services";
+import { feedService } from '../services';
 
 const discoverFeed = async (req: Request, res: Response, next: NextFunction) => {
   const { url } = req.body;

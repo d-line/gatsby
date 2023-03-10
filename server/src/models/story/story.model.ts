@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { IStoryDoc, IStoryModel } from './story.interfaces';
-import {paginate, toJSON} from "../plugins";
+import { paginate, toJSON } from '../plugins';
 
 const storySchema = new mongoose.Schema<IStoryDoc, IStoryModel>(
   {
