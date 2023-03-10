@@ -62,7 +62,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@faker-js/faker": "^6.2.0",
+    "@faker-js/faker": "^7.6.0",
     "@jest/globals": "^27.5.1",
     "@ryansonshine/commitizen": "^4.2.8",
     "@ryansonshine/cz-conventional-changelog": "^3.3.4",
