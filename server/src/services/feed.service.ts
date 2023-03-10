@@ -89,7 +89,7 @@ export const getFeedForURL = async (url: string, next: NextFunction) => {
   if (response.headers.has('content-type')) {
     const contentType = response.headers.get('content-type')?.toLocaleLowerCase();
     if (contentType && contentType.indexOf('charset') > -1) {
-      charset = contentType.split('=').slice(-1)[0];
+      [charset] = contentType.split('=').slice(-1);
     }
   }
   if (!charset) charset = 'utf-8';
