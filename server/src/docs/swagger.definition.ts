@@ -8,7 +8,7 @@ const swaggerDefinition = {
     description: 'Anti-Social RSS Reader',
     license: {
       name: 'MIT',
-      url: 'https://github.com/d-line/toro.git',
+      url: 'https://github.com/d-line/gatsby.git',
     },
   },
   servers: [

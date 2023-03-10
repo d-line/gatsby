@@ -84,9 +84,21 @@ export const deleteFeedById = async (feedId: mongoose.Types.ObjectId): Promise<I
 
 export const getFeedForURL = async (url: string, next: NextFunction) => {
   const response = await fetch(url);
+  let charset;
+  const buff = await response.arrayBuffer();
+  if (response.headers.has('content-type')) {
+    const contentType = response.headers.get('content-type')?.toLocaleLowerCase();
+    if (contentType && contentType.indexOf('charset') > -1) {
+      charset = contentType.split('=').slice(-1)[0];
+    }
+  }
+  if (!charset) charset = 'utf-8';
+  const decoder = new TextDecoder(charset);
+  const str = decoder.decode(buff);
+
   const parser = new Parser();
   try {
-    const feed = await parser.parseString(await response.text());
+    const feed = await parser.parseString(str);
     feed.feedUrl = feed.feedUrl || url;
     return feed;
   } catch (err) {
