@@ -78,17 +78,17 @@ jobs:
       run: |
         cd ./server
         npm run coverage:coveralls
-#    - name: Upload Coverage to Codecov
-#      uses: codecov/codecov-action@v2
-#      with:
-#        fail_ci_if_error: true
-#    - name: Test & publish code coverage
-#      uses: paambaati/codeclimate-action@v3.2.0
-#      env:
-#        CC_TEST_REPORTER_ID: deb43fc012ddac56d053dd8b0a356e6d30dabfa40a6caebccbee916c7131a70b
-#      with:
-#        debug: true
-#        workingDirectory: ${{github.workspace}}/api
-#        coverageCommand: "npm run coverage:coveralls"
-#        coverageLocations: |
-#          ${{github.workspace}}/api/coverage/*.lcov:lcov
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        fail_ci_if_error: true
+    - name: Test & publish code coverage
+      uses: paambaati/codeclimate-action@v3.2.0
+      env:
+        CC_TEST_REPORTER_ID: 2e8c261948d20049df4ea28b0b28d7f0e69423686dbb37ebd9eeb64248238a62
+      with:
+        debug: true
+        workingDirectory: ${{github.workspace}}/api
+        coverageCommand: "npm run coverage:coveralls"
+        coverageLocations: |
+          ${{github.workspace}}/api/coverage/*.lcov:lcov
