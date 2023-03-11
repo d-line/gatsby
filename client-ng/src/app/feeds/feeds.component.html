@@ -1,0 +1,48 @@
+<div id="action-bar">
+    <app-action-bar></app-action-bar>
+</div>
+
+<div id="feeds">
+    <ul id="feed-list">
+        <li class="feed" *ngFor="let feed of feeds" id="feed-{{feed.id}}">
+            <div class="feed-line">
+                <div class="feed-title-container">
+                    <!-- <p class="feed-title <%= feed.unread_stories.any? ? "feed-unread" : "" %>">
+                        <i class="icon-circle status <%= feed.status_bubble %>" data-toggle="tooltip" title="<%= t("partials.feed.status_bubble.#{feed.status_bubble}") if feed.status_bubble %>" data-placement="left"></i>
+                        <a href="/feed/<%= feed.id %>">
+                          <% if feed.unread_stories.any? %>
+                            (<%= feed.unread_stories.count %>)
+                          <% end %>
+                          <%= feed.name %>
+                        </a>
+                      </p>                     -->
+                    <span class="feed-title">
+                        <a [routerLink]="['/feeds', feed.id]">{{ feed.name }}</a>
+                    </span>
+                </div>
+                <div class="feed-actions">
+                    <div class="feed-last-updated">
+                        <span class="last-updated">Last updated at: </span>
+                        <span class="last-updated-time">
+                            {{ prettyDate(feed) }}
+                            <!-- <% if feed.last_fetched %>
+                          <%= I18n.l(feed.last_fetched) %>
+                        <% else %>
+                          <%= t("partials.feed.last_fetched.never") %>
+                        <% end %> -->
+                        </span>
+                    </div>
+                    <span class="read-feed">
+                        <a class="icon-external-link" href="{{ feed.url }}">link</a>
+                    </span>
+                    <span class="edit-feed">
+                        <a class="icon-edit" [routerLink]="['feeds', feed.id, 'edit']">edit</a>
+                    </span>
+                    <span class="remove-feed">
+                        <a class="icon-remove">remove</a>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

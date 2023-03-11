@@ -1,0 +1,75 @@
+<div id="action-bar">
+  <app-action-bar></app-action-bar>
+</div>
+
+<div id="stories">
+  <ul id="story-list">
+    <li class="story" *ngFor="let story of stories" id="story-{{story.id}}" [ngClass]="{'open': story.opened, 'cursor': story.opened}">
+      <div class="row story-preview">
+        <div class="col-3">
+          <div class="story-starred" (click)="toggleStar(story)" >
+            <fa-icon [icon]="faStar" *ngIf="!story.isStarred"></fa-icon>
+            <fa-icon [icon]="faSolidStar" *ngIf="story.isStarred"></fa-icon>
+          </div>
+          <span class="blog-title" (click)="onClick(story.id)">
+            {{ story.feed.name }}
+          </span>
+        </div>
+        <div class="col-9"  (click)="onClick(story.id)">
+          <div class="story-details">
+            <span class="story-title">
+              {{ story.title }}
+            </span>
+            <span class="story-lead">
+              &mdash; {{ lead(story) }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="story-body-container row">
+        <div class="story-body">
+          <h1>
+            <a href="{{ story.permalink }}" target="_blank">{{ story.title }}</a>
+          </h1>
+          <div [innerHTML]="story.body"></div>
+        </div>
+        <div class="row story-actions-container">
+          <div>
+            <span class="story-published">
+              {{ prettyDate(story) }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<!-- 
+
+  
+    <div class="story-body-container" class="row-fluid">
+  
+      <div class="row-fluid story-actions-container">
+        <div class="pull-left">
+          <span class="story-published">
+            {{= pretty_date }}
+          </span>
+        </div>
+        <div class="pull-right story-actions">
+          <div class="story-keep-unread">
+            <i class="icon-check{{ if(!keep_unread) { }}-empty{{ } }}"></i> <%= I18n.t('stories.keep_unread') %>
+          </div>
+          <div class="story-starred">
+            <i class="icon-star{{ if(!is_starred) { }}-empty{{ } }}"></i>
+          </div>
+          <a class="story-permalink" target="_blank" href="{{= permalink }}">
+            <i class="icon-external-link"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+-->

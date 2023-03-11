@@ -1,0 +1,116 @@
+ul#story-list {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+
+  li.story {
+    margin-bottom: 3px;
+    background-color: white;
+    border-radius: 3px;
+    border: 3px solid white;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+    color: #484948;
+
+    &.cursor {
+      border: 2px solid #22223B;
+    }
+
+    &.open {
+      opacity: 1.0;
+
+      .story-preview {
+        border-bottom: 1px solid #C9ADA7;
+      }
+      .story-body-container {
+        display: block;
+      }
+    }
+
+    .story-starred {
+      display: inline-block;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-right: 20px;
+    }
+
+    .story-body a {
+      color: #22223B;
+      text-decoration: none;
+      border-bottom: 1px dotted #22223B;
+
+      &:hover {
+        color: #4A4E69;
+        border-bottom: 1px dotted #4A4E69;
+      }
+    }
+
+    .story-preview {
+      margin-left: 0px;
+      margin-right: 0px;
+      height: 20px;
+      line-height: 22px;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .story-starred {
+        width: 13px;
+        float: left;
+        margin-left: 0px;
+        margin-right: 10px;
+      }
+
+      .story-title {
+        color: #22223B;
+      }
+      
+      .story-lead {
+        color: #9A8C98
+      }
+    }
+
+    .story-body-container {
+      display: none;
+      margin-left: 0px;
+      margin-right: 0px;
+
+      .story-body {
+        margin-bottom: 10px;
+        padding-top: 5px;
+        text-align: left;
+
+        h1, h2, h3 {
+          font-weight: 700;
+          line-height: 1.6;
+        }
+
+        h1 {
+          font-size: 16px;
+          margin-bottom: 10px;
+
+          a {
+            border: none;
+            color: #22223B;
+
+            &:hover {
+              color: #4A4E69
+            }
+          }
+        }
+      }
+    }
+
+    .blog-title {
+      text-align: left;
+      overflow: hidden;
+    }
+  }
+}

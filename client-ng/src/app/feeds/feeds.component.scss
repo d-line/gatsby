@@ -1,0 +1,72 @@
+ul#feed-list {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+
+    li.feed {
+        margin-bottom: 3px;
+        background-color: white;
+        border-radius: 3px;
+        border: 3px solid white;
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+        color: #484948;
+
+        &.cursor {
+            border: 2px solid #22223B;
+        }
+
+        .feed-line {
+            margin-left: 0px;
+            margin-right: 0px;
+            height: 20px;
+            line-height: 22px;
+            cursor: pointer;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            cursor: default;
+            display: flex;
+            justify-content: space-between;
+
+            .feed-title-container {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                .feed-title {
+                    display: inline-block;
+                    margin-left: 0px;
+        
+                    a {
+                        color: #22223B;
+                        text-decoration: none;
+        
+                        &:hover {
+                            color: #4A4E69;
+                        }
+                    }
+        
+                }
+        
+            }
+        }
+
+
+        .feed-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+
+            .feed-last-updated {
+                text-align: right;
+              }
+
+              .last-updated {
+                font-size: 10px;
+              }
+          }
+    }
+}
