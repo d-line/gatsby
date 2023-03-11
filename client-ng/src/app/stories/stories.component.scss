@@ -4,9 +4,9 @@ ul#story-list {
   padding-left: 0px;
 
   li.story {
-    margin-bottom: 3px;
+    margin-bottom: 7px;
     background-color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 3px solid white;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -41,9 +41,9 @@ ul#story-list {
     }
 
     .story-body a {
-      color: #22223B;
+      color: #F67100;
       text-decoration: none;
-      border-bottom: 1px dotted #22223B;
+      border-bottom: 1px dotted #F67100;
 
       &:hover {
         color: #4A4E69;
@@ -54,8 +54,8 @@ ul#story-list {
     .story-preview {
       margin-left: 0px;
       margin-right: 0px;
-      height: 20px;
-      line-height: 22px;
+      height: 30px;
+      line-height: 30px;
       cursor: pointer;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -71,7 +71,7 @@ ul#story-list {
       .story-title {
         color: #22223B;
       }
-      
+
       .story-lead {
         color: #9A8C98
       }

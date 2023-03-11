@@ -17,6 +17,6 @@ export const createStory = async (storyBody: IStory): Promise<IStoryDoc> => {
  * @returns {Promise<IStoryDoc[]>}
  */
 export const queryStories = async (filter: Record<string, any>, options: IOptions): Promise<QueryResult> => {
-q  const stories = await Story.paginate(filter, options);
+  const stories = await Story.paginate(filter, options);
   return stories;
 };
