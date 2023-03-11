@@ -88,7 +88,7 @@ jobs:
         CC_TEST_REPORTER_ID: 2e8c261948d20049df4ea28b0b28d7f0e69423686dbb37ebd9eeb64248238a62
       with:
         debug: true
-        workingDirectory: ${{github.workspace}}/api
+        workingDirectory: ${{github.workspace}}/server
         coverageCommand: "npm run coverage:coveralls"
         coverageLocations: |
-          ${{github.workspace}}/api/coverage/*.lcov:lcov
+          ${{github.workspace}}/server/coverage/*.lcov:lcov
