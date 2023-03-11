@@ -75,8 +75,18 @@ const fetchFeed = async (feed: IFeedDoc) => {
   logger.info(`[ FETCHING ] => ${feed.url} ${feed.name}`);
   try {
     const response = await fetch(feed.url);
-    const data = await response.text();
-    const parsed = await parser.parseString(data);
+    let charset;
+    const buff = await response.arrayBuffer();
+    if (response.headers.has('content-type')) {
+      const contentType = response.headers.get('content-type')?.toLocaleLowerCase();
+      if (contentType && contentType.indexOf('charset') > -1) {
+        [charset] = contentType.split('=').slice(-1);
+      }
+    }
+    if (!charset) charset = 'utf-8';
+    const decoder = new TextDecoder(charset);
+    const str = decoder.decode(buff);
+    const parsed = await parser.parseString(str);
     await modifyFeed(parsed, feed);
     await setFeedStatus(feed, STATUS.GREEN);
   } catch (err) {

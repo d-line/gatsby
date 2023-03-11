@@ -14,7 +14,6 @@ export class StoriesService {
   getAllStories() {
     return this.http.get(`${this.endpoint}?limit=1000`).pipe(catchError(this.handleError));
   }
-  
   handleError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

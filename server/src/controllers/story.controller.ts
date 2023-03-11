@@ -18,6 +18,6 @@ export const getStories = catchAsync(async (req: Request, res: Response) => {
   if (!options.sortBy) {
     options.sortBy = 'published:desc';
   }
-  const result = await storyService.queryStories(filter, options);
+  const result = await storyService.queryStories(filter, { ...options, populate: 'feed' });
   res.send(result);
 });

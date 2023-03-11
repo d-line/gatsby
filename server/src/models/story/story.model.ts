@@ -19,7 +19,7 @@ const storySchema = new mongoose.Schema<IStoryDoc, IStoryModel>(
       trim: true,
     },
     feed: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'Feed',
     },
     published: {
@@ -53,6 +53,6 @@ storySchema.index({ entryId: 1, feedId: 1 }, { unique: true });
 storySchema.plugin(toJSON);
 storySchema.plugin(paginate);
 
-const Feed = mongoose.model<IStoryDoc, IStoryModel>('Story', storySchema);
+const Story = mongoose.model<IStoryDoc, IStoryModel>('Story', storySchema);
 
-export default Feed;
+export default Story;
