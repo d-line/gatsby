@@ -64,7 +64,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^16.2.1",
     "@faker-js/faker": "^7.6.0",
-    "@jest/globals": "^27.5.1",
+    "@jest/globals": "^29.5.0",
     "@ryansonshine/commitizen": "^4.2.8",
     "@ryansonshine/cz-conventional-changelog": "^3.3.4",
     "@types/bcryptjs": "^2.4.2",
