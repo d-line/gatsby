@@ -75,7 +75,7 @@
     "@types/express-rate-limit": "^6.0.0",
     "@types/jest": "^27.4.1",
     "@types/morgan": "^1.9.3",
-    "@types/node": "^16.11.12",
+    "@types/node": "^18.15.1",
     "@types/nodemailer": "^6.4.4",
     "@types/passport-jwt": "^3.0.6",
     "@types/supertest": "^2.0.11",
